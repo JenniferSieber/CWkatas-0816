@@ -13,7 +13,7 @@ const calc = x => {
   let total1 = x.replace(/./g, x => x.charCodeAt(0));
   let total2 = total1.replaceAll(/7/g, '1');
   let sum = n => [...n].reduce((a,b) => +a + +b);
-  return sum(total1) - sum(total2)
+  return sum(total1) - sum(total2);
 }
 
 console.log(calc('abcdef')); 
@@ -43,7 +43,7 @@ console.log(divisibleByThree('88'));
 // https://www.codewars.com/kata/5a995c2aba1bb57f660001fd/train/javascript
 const scrollingText = text => {
   text = text.toUpperCase();
-  return [...text].map((_, i) => text.slice(i) + text.slice(0, i))
+  return [...text].map((_, i) => text.slice(i) + text.slice(0, i));
 }
 
 console.log(scrollingText('abc'));
